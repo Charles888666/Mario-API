@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author" content="Mario">
+    <title>Mario's API - API文档</title>
+    <meta name="keywords" content="API,Steam游戏库">
+    <link rel="icon" type="image/ico" href="/img/favicon.png">
+    <link href="/css/doc.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.2.0/styles/monokai.min.css">
+    <script src="https://cdn.staticfile.org/highlight.js/10.2.0/highlight.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body class="grey-bg">
+    <div data-xzlapi="" id="header"></div>
+    <div data-xzlapi="" id="doc-container" class="container doc-container">
+        <div data-xzlapi="" class="doc-title-box">
+            <span data-xzlapi="" id="doc-title-span" class="dn">
+
+            </span>
+            <h2 data-xzlapi="" id="doc-title">Steam游戏库</h2>
+            获取你的Steam游戏仓库数据，适用于二次开发，需将你的库设置为公开，详见：<a href="https://github.com/Fog-Forest/Steam-page">Steam-page</a>
+        </div>
+        <div data-xzlapi="" id="doc-body">
+            <div data-xzlapi="" id="page_md_content" class="page_content_main">
+                <div data-xzlapi="" id="editor-md" class="main-editor markdown-body editormd-html-preview">
+                    <!--API信息-->
+                    <p><strong>请求URL：</strong><span class="txt">https://your.domain/steam</span></p>
+                    <p><strong>请求方式：</strong><span class="txt">GET</span></p>
+                    <p><strong>返回格式：</strong><span class="txt">JSON</span></p>
+                    <p><strong>请求示例：</strong><span
+                            class="txt">https://your.domain/steam?id=76561198849944519&type=all</span></p>
+                    <p><strong>参数：</strong> </p>
+                    <div style="width: 100%;overflow-x: auto;">
+                        <table>
+                            <thead>
+                                <tr style="background-color: #f2f2f2;color: rgb(119 119 119);">
+                                    <th style="text-align: left; width: 173px;">参数名</th>
+                                    <th style="text-align: left; width: 173px;">类型</th>
+                                    <th style="text-align: left; width: 173px;">示例值</th>
+                                    <th style="width: 173px;">描述</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td>必选</td>
+                                    <td>SteamID</td>
+                                    <td>不知道如何获取的可以参考 https://m1314.cn/327.html</td>
+                                </tr>
+                                <tr>
+                                    <td><code>type</code></td>
+                                    <td>可选</td>
+                                    <td>all/recent</td>
+                                    <td>all：全部游戏；recent：最近游玩；默认为all</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>返回示例</strong></p>
+                    <pre><code>
+[
+    {
+        "appid": 1174180,
+        "name": "Red Dead Redemption 2",
+        "logo": "https://media.st.dl.pinyuncloud.com/steam/apps/1174180/capsule_184x69.jpg",
+        "has_adult_content": 1,
+        "friendlyURL": 1174180,
+        "availStatLinks": {
+            "achievements": true,
+            "global_achievements": true,
+            "stats": false,
+            "gcpd": false,
+            "leaderboards": false,
+            "global_leaderboards": false
+        },
+        "hours_forever": "271",
+        "last_played": 1595055223
+    }
+]
+                    </code></pre>
+                    <p><strong>错误示例</strong></p>
+                    <pre><code>Steam id 为必须参数！</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="author" content="Mario">
+	<title>Mario's API</title>
+	<meta name="description" content="Mario's API，一个简易的API聚合页。">
+	<meta name="keywords" content="API,Mario">
+	<link rel="icon" type="image/ico" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/layui/2.5.6/css/layui.min.css" />
+	<link rel="stylesheet" href="css/min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/layui/2.5.6/layui.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="content">
+			<div class="header-logo">
+				<a href="/" title="Mario's API">Mario's API</a>
+			</div>
+			<div class="header-avatar">
+				<a target="_blank" href="/" title="">反馈</a>
+			</div>
+		</div>
+	</div>
+	<div class="content home">
+		<div class="item">
+			<div class="layui-table-auto">
+				<table>
+					<thead>
+						<tr>
+							<th>接口名称</th>
+							<th>接口文档</th>
+							<th>接口介绍</th>
+							<th>更新时间</th>
+							<th>接口状态</th>
+						</tr>
+					</thead>
+					<tbody id="listApi">
+						<script type="text/javascript">
+							$("#listApi").load("/list.php", function (responseTxt, statusTxt, xhr) {
+								if (statusTxt == "success") {
+									console.log("success")
+								}
+								if (statusTxt == "error") {
+									console.log("error")
+								}
+							});
+						</script>
+					</tbody>
+				</table>
+			</div>
+			<fieldset class="layui-elem-field">
+				<legend>为什么制作这些接口？</legend>
+				<div class="layui-field-box">
+					<p>1、平时闲的无聊写的接口</p>
+					<p>2、有兴趣的可以赞助支持</p>
+					<p>3、打不打赏无所谓，不会阻止站长们调用</p>
+					<p>4、接口随缘更新~</p>
+				</div>
+			</fieldset>
+			<blockquote class="layui-elem-quote">支持 Mario <a class="layui-btn layui-btn-xs" href="javaScript:dashang()"
+					title="赞赏" data-uid="1" data-act="follow"><span>赞赏</span></a></blockquote>
+			<div class="layui-table-auto">
+				<table class="layui-table">
+					<thead>
+						<tr>
+							<th>赞助姓名</th>
+							<th>赞助金额</th>
+							<th>赞助说明</th>
+						</tr>
+					</thead>
+					<!--有人赞赏时手动修改，不过应该没有吧~<tbody>
+							<tr>
+								<td>匿名</td>
+								<td style="color: #FF5722;">5.00</td>
+								<td>捐赠</td>
+							</tr>
+						</tbody>-->
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<footer class="footer">
+		<div class="content">
+			<p><span>© 2020</span><a href="/" title="Mario's API"></a>Mario's API</a></p>
+			<p id="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></p>
+		</div>
+	</footer>
+	<script>
+		// 赞赏
+		var weixin = 'https://view.amogu.cn/images/2020/08/26/WX.png';
+		var zfb = 'https://view.amogu.cn/images/2020/08/26/ZFB.png';
+
+		function dashang(imgurl) {
+			layui.use('layer', function () {
+				var layer = layui.layer;
+				layer.open({
+					skin: 'siyuanFormSkin1',
+					offset: '100px',
+					type: 1,
+					move: false,
+					title: "感谢你的赞赏哦",
+					content: '<div id="layerrewardauto" class="layui-layer-content"><div class="dashang"><div class="rewards-item"><img src="' + weixin + '"><h4>微信扫一扫</h4></div><div class="rewards-item"><img src="' + zfb + '"><h4>支付宝扫一扫</h4></div></div></div>'
+				});
+			});
+		}
+		// 一言
+		fetch('https://v1.hitokoto.cn')
+			.then(response => response.json())
+			.then(data => {
+				const hitokoto = document.getElementById('hitokoto_text')
+				hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+				hitokoto.innerText = data.hitokoto
+			})
+			.catch(console.error)
+	</script>
+</body>
+
+</html>

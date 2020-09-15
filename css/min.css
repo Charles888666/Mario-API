@@ -1,0 +1,50 @@
+body,html{width:100%;height:100%;}
+body{background-color:#f1f2f6;color:#333;letter-spacing:1px;font-size:14px;}
+*{margin:0;padding:0;}
+*,:after,:before{box-sizing:border-box;}
+h1,h2,h3,h4,h5,h6{font-weight:400;}
+button,input{outline:0;}
+a{color:#333;text-decoration:none;}
+img{max-width: 100%;border: none;vertical-align: middle;}
+.content{overflow:hidden;margin:auto;width: 100%;max-width: 100%;padding: 0 15px;}
+/*头部*/
+.header{background-color:#3F4045;overflow:hidden;margin-bottom:15px;}
+.header .header-logo{float:left;height:50px;line-height:50px;}
+.header .header-logo a,.header .header-avatar a{font-size:16px;color:#fff;}
+.header .header-avatar{float:right;height:50px;line-height:50px;}
+/*首页内容*/
+.home{position: relative;min-height: calc(100vh - 135px);}
+.item{overflow:hidden;margin-bottom:15px;padding:15px;background-color:#fff;}
+.item .layui-table-auto{overflow-x:auto;overflow-y:hidden;min-height:.01%;}
+.layui-table-auto table{width:100%;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+.layui-table-auto td,.layui-table-auto th{white-space:nowrap;}
+table td,table th{padding:10px 10px;border-right:1px solid #ddd;border-bottom:1px solid #ddd;text-align: center;}
+table th{background-color:#f9f9f9;text-align:center;}
+.item .layui-elem-field{margin-top: 20px;}
+.layui-elem-field .layui-field-box p+p{padding-top: 3px;}
+.item .layui-table td{text-align: left;}
+.dashang{overflow: hidden;padding: 10px;text-align: center;}
+.dashang .rewards-item {float: left;width: 50%;}
+.dashang .rewards-item img {width: 145px;height: 145px;line-height: 145px;padding: 5px;}
+/*页面信息*/
+.item-page{overflow:hidden;margin-bottom:15px;background-color:#fff;}
+.item-page .page-header{position:relative;display:flex;padding:0 15px;height:40px;border-bottom:1px solid #f6f6f6;font-size:16px;line-height:40px;}
+.item-page .page-header h1{font-size:16px;}
+.item-page .page-header span{margin-left:auto;}
+.item-page .page-header span em{display:inline-block;padding:0 5px;height:22px;border-radius:2px;background-color:#009688;color:#fff;font-style:normal;font-size:12px;line-height:22px;}
+.item-page .page-body{overflow:hidden;padding:15px;}
+.page-body .layui-elem-quote{padding:10px;}
+.page-content .main{margin-top:10px;}
+.page-content .main .txt{margin-left:5px;border-bottom:1px solid #f44336;word-break:break-all;}
+.page-content .linep{position:relative;overflow:hidden;margin-top:15px;padding-left:10px;font-size:14px;}
+.page-content .linep:before{position:absolute;top:0;left:0;width:4px;height:18px;border-radius:2px;background:#f44336;content:"";}
+.page-content .layui-table td{text-align:left;}
+.page-table{overflow-x:auto;overflow-y:hidden;min-height:.01%;}
+.page-table .layui-table{margin-bottom:0;}
+.page-table td,.page-table th{white-space:nowrap;}
+/*底部*/
+.footer{overflow:hidden;padding:10px;width:100%;background-color:#fff;color:#666;text-align:center;}
+.footer a{margin:auto 5px;color:#555;}
+.footer p+p{margin-top:10px;}
+/*自定义*/
+.item-404{overflow:hidden;margin-bottom:15px;padding:30px 15px;background-color:#fff;color:#555;text-align:center;font-size:16px;}

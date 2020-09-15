@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="author" content="Mario">
+	<title>Mario's API - API文档</title>
+	<meta name="keywords" content="API,随机动漫图接口">
+	<link rel="icon" type="image/ico" href="/img/favicon.png">
+	<link href="/css/doc.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.2.0/styles/monokai.min.css">
+	<script src="https://cdn.staticfile.org/highlight.js/10.2.0/highlight.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+</head>
+
+<body class="grey-bg">
+	<div data-xzlapi="" id="header"></div>
+	<div data-xzlapi="" id="doc-container" class="container doc-container">
+		<div data-xzlapi="" class="doc-title-box">
+			<span data-xzlapi="" id="doc-title-span" class="dn">
+
+			</span>
+			<h2 data-xzlapi="" id="doc-title">随机动漫图</h2>
+			随机动漫图，供前端调用使用，全球CDN加速
+		</div>
+		<div data-xzlapi="" id="doc-body">
+			<div data-xzlapi="" id="page_md_content" class="page_content_main">
+				<div data-xzlapi="" id="editor-md" class="main-editor markdown-body editormd-html-preview">
+					<!--API信息-->
+					<p><strong>请求URL：</strong><span class="txt">https://your.domain/api/random</span></p>
+					<p><strong>请求方式：</strong><span class="txt">GET</span></p>
+					<p><strong>返回格式：</strong><span class="txt">TEXT/IMG</span></p>
+					<p><strong>请求示例：</strong><span class="txt">https://your.domain/api/random?size=0</span></p>
+					<p><strong>参数：</strong> </p>
+					<div style="width: 100%;overflow-x: auto;">
+						<table>
+							<thead>
+								<tr style="background-color: #f2f2f2;color: rgb(119 119 119);">
+									<th style="text-align: left; width: 173px;">参数名</th>
+									<th style="text-align: left; width: 173px;">类型</th>
+									<th style="text-align: left; width: 173px;">示例值</th>
+									<th style="width: 173px;">描述</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>size</code></td>
+									<td>可选</td>
+									<td>0-2</td>
+									<td>返回的图片缩略图(大小)级别，数字越大图片越模糊、大小越小；默认为0</td>
+								</tr>
+								<tr>
+									<td><code>return</code></td>
+									<td>可选</td>
+									<td>text</td>
+									<td>text：返回图片链接；默认为直接返回图片</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p><strong>返回示例</strong></p>
+					<img class="mdui-img-rounded" src="https://your.domain/api/random?size=0" style=" width: 250px;">
+					<p><strong>错误示例</strong></p>
+					<pre><code>暂无</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
